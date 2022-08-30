@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chat</title>
+    </head>
+    <body>
+        <h1>WebSocket Chat</h1>
+        <form action="" onsubmit="sendMessage(event)">
+            <label>Item ID: <input type="text" id="itemId" autocomplete="off" value="yasmine"/></label>
+            <button onclick="connect(event)">Connect</button>
+            
+        </form>
+        <button id="disconnect">disconnect</button>
+        <button id="record">record</button>
+        <button id="stop">stop</button>
+        <audio id="audio" controls></audio>
+
+        <ul id='messages'>
+        </ul>
+        <script async src="{{ url_for('static', path='js/main.js') }}"></script>
+        <script async src="{{ url_for('static', path='js/utils.js') }}"></script>
+    </body>
+</html>
